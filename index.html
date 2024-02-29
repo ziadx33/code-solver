@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Code syntax fixer</title>
+	</head>
+	<body>
+		<div class="header">Code Fixer</div>
+		<div class="code-here">
+			<textarea id="enter-code-here" autofocus></textarea>
+			<input class="btn sub-btn" type="submit" value="Fix Code" />
+		</div>
+		<div class="fixedAndExplaineCode">
+			<div class="fixed-code">
+				<h2>Fixed Code</h2>
+				<textarea id="fixedCodeHere" disabled></textarea>
+			</div>
+			<div class="explaine-code">
+				<h2>Explain Code</h2>
+				<textarea id="explainCodeHere" disabled></textarea>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>

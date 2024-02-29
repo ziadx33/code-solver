@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: azure;
+}
+:root {
+	--main-color: dodgerblue;
+}
+.header {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--main-color);
+	flex-wrap: wrap;
+	font-family: sans-serif;
+	font-size: 24px;
+	font-style: oblique;
+}
+
+.code-here {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+textarea {
+	margin-top: 20px;
+	width: 80%;
+	height: 80vh;
+}
+
+#enter-code-here {
+	resize: none;
+	font-size: 18px;
+}
+
+.btn {
+	margin-top: 10px;
+	width: 450px;
+	height: 50px;
+	font-family: sans-serif;
+	font-size: 18px;
+	background-color: var(--main-color);
+	border: none;
+	cursor: pointer;
+}
+.btn:hover {
+	opacity: 0.8;
+}
+
+.fixedAndExplaineCode {
+	margin-top: 90px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.fixed-code {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 50%;
+}
+
+.fixed-code textarea {
+	width: 95%;
+	resize: none;
+	font-size: 18px;
+}
+
+.explaine-code {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 50%;
+}
+
+.explaine-code textarea {
+	width: 95%;
+	resize: none;
+	font-size: 18px;
+}
+
+:is(.explaine-code, .fixed-code) {
+	position: relative;
+	&:has(.loading)::before {
+		content: "loading...";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+		z-index: 5;
+		color: black;
+		font-size: 50px;
+	}
+}
